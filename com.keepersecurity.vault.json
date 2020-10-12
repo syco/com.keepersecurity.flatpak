@@ -1,0 +1,68 @@
+{
+  "id": "com.keepersecurity.vault",
+  "command": "/app/start.sh",
+  "separate-locales": false,
+  "runtime": "org.freedesktop.Platform",
+  "runtime-version": "19.08",
+  "sdk": "org.freedesktop.Sdk",
+  "finish-args": [
+    "--device=dri",
+    "--filesystem=home",
+    "--share=ipc",
+    "--share=network",
+    "--socket=x11",
+    "--socket=pulseaudio",
+    "--talk-name=org.freedesktop.Notifications",
+    "--talk-name=org.gtk.Notifications",
+    "--talk-name=org.kde.StatusNotifierWatcher"
+  ],
+  "modules": [
+    {
+      "name": "keepersecurity",
+      "modules": [
+      ],
+      "sources": [
+        {
+          "type": "file",
+          "url": "https://www.keepersecurity.com/desktop_electron/Linux/repo/deb/keeperpasswordmanager_15.0.6_amd64.deb",
+          "sha256": "2ca0c6a7702b30a32b0ced9fecd7cb3f4134b8efa0d9c09cc286decf0405e6d0"
+        },
+        {
+          "type": "script",
+          "dest-filename": "start.sh",
+          "commands": [
+            "exec /app/usr/bin/keeperpasswordmanager --no-sandbox $@"
+          ]
+        },
+        {
+          "type": "file",
+          "path": "keepersecurity.desktop",
+          "sha256": "fef9eb796e2e2ee1a6f310a13339553f02d2f65dfe1c668d56b515f91ced9c69"
+        },
+        {
+          "type": "file",
+          "path": "keepersecurity.png",
+          "sha256": "4aeeefc82494b9b4daf687bfb651228a47f871d663bd2834f83ef05657937a37"
+        },
+        {
+          "type": "file",
+          "path": "keepersecurity.metainfo.xml",
+          "sha256": "7d91e8225b27031b175c90dfaf55225599e0a3d78ebbbe3f972f211064db840a"
+        }
+      ],
+      "buildsystem": "simple",
+      "build-commands": [
+        "ar x keeperpasswordmanager_15.0.6_amd64.deb",
+        "tar xf data.tar.xz -C /app",
+        "rm -Rf keepersecurity-15.0.6.deb control.tar.gz data.tar.xz debian-binary",
+        "chmod -R 755 /app/usr/bin/keeperpasswordmanager",
+        "mv start.sh /app"
+      ],
+      "post-install": [
+        "install -Dm644 keepersecurity.desktop /app/share/applications/keepersecurity.desktop",
+        "install -Dm644 keepersecurity.png /app/share/icons/com.keepersecurity.vault.png",
+        "install -Dm644 keepersecurity.metainfo.xml /app/share/metainfo/com.keepersecurity.vault.metainfo.xml"
+      ]
+    }
+  ]
+}

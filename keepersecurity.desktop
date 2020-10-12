@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=keepersecurity vault
+GenericName=keepersecurity vault
+Comment=keepersecurity vault
+X-GNOME-FullName=keepersecurity vault
+Type=Application
+Exec=/app/start.sh
+Icon=com.keepersecurity.vault
+StartupNotify=false
+Terminal=false

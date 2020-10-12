@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>com.keepersecurity.vault</id>
+  <name>Keepersecurity Vault</name>
+  <project_license>NONE</project_license>
+  <metadata_license>NONE</metadata_license>
+  <summary>Keepersecurity Vault</summary>
+  <developer_name>Keeper Security, Inc.</developer_name>
+  <description>
+    <p>
+      Keepersecurity Vault
+    </p>
+  </description>
+
+  <launchable type="desktop-id">com.keepersecurity.vault.desktop</launchable>
+
+  <url type="homepage">https://www.keepersecurity.com/</url>
+  <url type="help">https://www.keepersecurity.com/support.html</url>
+
+  <provides>
+    <binary>keepersecurity</binary>
+  </provides>
+
+  <releases>
+    <release version="15.0.6" date="2020-05-12">
+      <description>
+        <p>release-15.0.6</p>
+      </description>
+    </release>
+  </releases>
+</component>
