@@ -10,17 +10,11 @@
     "--filesystem=home",
     "--share=ipc",
     "--share=network",
-    "--socket=x11",
-    "--socket=pulseaudio",
-    "--talk-name=org.freedesktop.Notifications",
-    "--talk-name=org.gtk.Notifications",
-    "--talk-name=org.kde.StatusNotifierWatcher"
+    "--socket=x11"
   ],
   "modules": [
     {
       "name": "keepersecurity",
-      "modules": [
-      ],
       "sources": [
         {
           "type": "file",
