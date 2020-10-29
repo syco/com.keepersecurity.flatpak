@@ -30,17 +30,17 @@
         },
         {
           "type": "file",
-          "path": "keepersecurity.desktop",
+          "path": "com.keepersecurity.vault.desktop",
           "sha256": "fef9eb796e2e2ee1a6f310a13339553f02d2f65dfe1c668d56b515f91ced9c69"
         },
         {
           "type": "file",
-          "path": "keepersecurity.png",
+          "path": "com.keepersecurity.vault.png",
           "sha256": "4aeeefc82494b9b4daf687bfb651228a47f871d663bd2834f83ef05657937a37"
         },
         {
           "type": "file",
-          "path": "keepersecurity.metainfo.xml",
+          "path": "com.keepersecurity.vault.metainfo.xml",
           "sha256": "7d91e8225b27031b175c90dfaf55225599e0a3d78ebbbe3f972f211064db840a"
         }
       ],
@@ -53,9 +53,9 @@
         "mv start.sh /app"
       ],
       "post-install": [
-        "install -Dm644 keepersecurity.desktop /app/share/applications/keepersecurity.desktop",
-        "install -Dm644 keepersecurity.png /app/share/icons/com.keepersecurity.vault.png",
-        "install -Dm644 keepersecurity.metainfo.xml /app/share/metainfo/com.keepersecurity.vault.metainfo.xml"
+        "install -Dm644 com.keepersecurity.vault.desktop /app/share/applications/com.keepersecurity.vault.desktop",
+        "install -Dm644 com.keepersecurity.vault.png /app/share/icons/com.keepersecurity.vault.png",
+        "install -Dm644 com.keepersecurity.vault.metainfo.xml /app/share/metainfo/com.keepersecurity.vault.metainfo.xml"
       ]
     }
   ]
