@@ -17,10 +17,10 @@ flatpak run com.keepersecurity.vault
 flatpak run --command=/bin/bash com.keepersecurity.vault
 
 # EXPORT
-flatpak build-bundle test-repo-keepersecurity keepersecurity-15.0.6.flatpak com.keepersecurity.vault
+flatpak build-bundle test-repo-keepersecurity keepersecurity-15.0.9.flatpak com.keepersecurity.vault
 
 # IMPORT
-sudo flatpak -y install keepersecurity-15.0.6.flatpak
+sudo flatpak -y install keepersecurity-15.0.9.flatpak
 sudo flatpak -y remove com.keepersecurity.vault
 
 ```

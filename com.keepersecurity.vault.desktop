@@ -9,3 +9,4 @@ Exec=/app/start.sh
 Icon=com.keepersecurity.vault
 StartupNotify=false
 Terminal=false
+Categories=Utility;

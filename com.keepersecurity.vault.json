@@ -3,7 +3,7 @@
   "command": "/app/start.sh",
   "separate-locales": false,
   "runtime": "org.freedesktop.Platform",
-  "runtime-version": "19.08",
+  "runtime-version": "20.08",
   "sdk": "org.freedesktop.Sdk",
   "finish-args": [
     "--device=dri",
@@ -18,8 +18,8 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://www.keepersecurity.com/desktop_electron/Linux/repo/deb/keeperpasswordmanager_15.0.6_amd64.deb",
-          "sha256": "2ca0c6a7702b30a32b0ced9fecd7cb3f4134b8efa0d9c09cc286decf0405e6d0"
+          "url": "https://www.keepersecurity.com/desktop_electron/Linux/repo/deb/keeperpasswordmanager_15.0.9_amd64.deb",
+          "sha256": "54335af03c5d8810057af4e4076fc9d2f53ee527b11324f2aac8a46e36468bf5"
         },
         {
           "type": "script",
@@ -31,7 +31,7 @@
         {
           "type": "file",
           "path": "com.keepersecurity.vault.desktop",
-          "sha256": "fef9eb796e2e2ee1a6f310a13339553f02d2f65dfe1c668d56b515f91ced9c69"
+          "sha256": "2f3235480351340a0a3e010f5ff4f9d980723317e9ed14a1129a52b773261116"
         },
         {
           "type": "file",
@@ -41,14 +41,14 @@
         {
           "type": "file",
           "path": "com.keepersecurity.vault.metainfo.xml",
-          "sha256": "7d91e8225b27031b175c90dfaf55225599e0a3d78ebbbe3f972f211064db840a"
+          "sha256": "e10923f75de6ff84a1fffe659cc22d2e54420460402bca300e0716f879af7f78"
         }
       ],
       "buildsystem": "simple",
       "build-commands": [
-        "ar x keeperpasswordmanager_15.0.6_amd64.deb",
+        "ar x keeperpasswordmanager_15.0.9_amd64.deb",
         "tar xf data.tar.xz -C /app",
-        "rm -Rf keepersecurity-15.0.6.deb control.tar.gz data.tar.xz debian-binary",
+        "rm -Rf keepersecurity-15.0.9.deb control.tar.gz data.tar.xz debian-binary",
         "chmod -R 755 /app/usr/bin/keeperpasswordmanager",
         "mv start.sh /app"
       ],
