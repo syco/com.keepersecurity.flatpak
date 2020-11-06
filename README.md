@@ -10,6 +10,10 @@ sudo flatpak -y --system install flathub org.freedesktop.Platform//20.08 org.fre
 flatpak-builder --force-clean --repo=test-repo-keepersecurity build-dir com.keepersecurity.vault.json
 
 # TEST
+flatpak-builder --run build-dir com.keepersecurity.vault.json /app/start.sh
+flatpak-builder --run build-dir com.keepersecurity.vault.json /bin/bash
+
+# INSTALL
 sudo flatpak remote-add --no-gpg-verify test-repo-keepersecurity test-repo-keepersecurity
 flatpak -y remove com.keepersecurity.vault
 flatpak -y --system install test-repo-keepersecurity com.keepersecurity.vault
@@ -20,7 +24,7 @@ flatpak run --command=/bin/bash com.keepersecurity.vault
 flatpak build-bundle test-repo-keepersecurity keepersecurity-15.0.9.flatpak com.keepersecurity.vault
 
 # IMPORT
-sudo flatpak -y install keepersecurity-15.0.9.flatpak
 sudo flatpak -y remove com.keepersecurity.vault
+sudo flatpak -y install keepersecurity-15.0.9.flatpak
 
 ```
