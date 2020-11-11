@@ -1,10 +1,11 @@
 [Desktop Entry]
-Name=keepersecurity vault
-Comment=keepersecurity vault
-GenericName=keepersecurity vault
-Exec=/app/start.sh
+Name=Keeper Password Manager
+Comment=Keeper is the world's #1 most downloaded password keeper and secure digital vault for protecting and managing your passwords and other secret information. Millions of people use Keeper to protect their most sensitive and private information.
+GenericName=Password Manager
+Exec=/app/start.sh %U
 Icon=com.keepersecurity.vault
 Type=Application
-StartupNotify=false
+StartupNotify=true
 Terminal=false
 Categories=Utility;
+StartupWMClass=keeper password manager
