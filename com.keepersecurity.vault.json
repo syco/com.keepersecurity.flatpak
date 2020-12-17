@@ -5,6 +5,8 @@
   "runtime": "org.freedesktop.Platform",
   "runtime-version": "20.08",
   "sdk": "org.freedesktop.Sdk",
+  "base": "org.electronjs.Electron2.BaseApp",
+  "base-version": "20.08",
   "finish-args": [
     "--device=dri",
     "--filesystem=home",
@@ -18,37 +20,34 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://www.keepersecurity.com/desktop_electron/Linux/repo/deb/keeperpasswordmanager_15.0.9_amd64.deb",
-          "sha256": "54335af03c5d8810057af4e4076fc9d2f53ee527b11324f2aac8a46e36468bf5"
+          "url": "https://www.keepersecurity.com/desktop_electron/Linux/repo/deb/keeperpasswordmanager_15.0.11_amd64.deb",
+          "sha256": "a60a3629d768c8f2013b523c6215f99a99c8d4fc37f37122805b522af3949ecb"
         },
         {
           "type": "script",
           "dest-filename": "start.sh",
           "commands": [
-            "exec /app/usr/bin/keeperpasswordmanager --no-sandbox $@"
+            "exec zypak-wrapper /app/usr/bin/keeperpasswordmanager $@"
           ]
         },
         {
           "type": "file",
-          "path": "com.keepersecurity.vault.desktop",
-          "sha256": "5545b3b781764b045a187b6ad13b20b9563dcf0fc405d6ab922c5ae32c16312d"
+          "path": "com.keepersecurity.vault.desktop"
         },
         {
           "type": "file",
-          "path": "com.keepersecurity.vault.png",
-          "sha256": "4aeeefc82494b9b4daf687bfb651228a47f871d663bd2834f83ef05657937a37"
+          "path": "com.keepersecurity.vault.png"
         },
         {
           "type": "file",
-          "path": "com.keepersecurity.vault.metainfo.xml",
-          "sha256": "e10923f75de6ff84a1fffe659cc22d2e54420460402bca300e0716f879af7f78"
+          "path": "com.keepersecurity.vault.metainfo.xml"
         }
       ],
       "buildsystem": "simple",
       "build-commands": [
-        "ar x keeperpasswordmanager_15.0.9_amd64.deb",
+        "ar x keeperpasswordmanager_15.0.11_amd64.deb",
         "tar xf data.tar.xz -C /app",
-        "rm -Rf keepersecurity-15.0.9.deb control.tar.gz data.tar.xz debian-binary",
+        "rm -Rf keepersecurity-15.0.11.deb control.tar.gz data.tar.xz debian-binary",
         "chmod -R 755 /app/usr/bin/keeperpasswordmanager",
         "mv start.sh /app"
       ],
