@@ -22,6 +22,11 @@
   </provides>
 
   <releases>
+    <release version="15.0.12" date="2020-12-28">
+      <description>
+        <p>release-15.0.12</p>
+      </description>
+    </release>
     <release version="15.0.11" date="2020-11-12">
       <description>
         <p>release-15.0.11</p>

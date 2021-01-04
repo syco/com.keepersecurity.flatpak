@@ -20,8 +20,8 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://www.keepersecurity.com/desktop_electron/Linux/repo/deb/keeperpasswordmanager_15.0.11_amd64.deb",
-          "sha256": "a60a3629d768c8f2013b523c6215f99a99c8d4fc37f37122805b522af3949ecb"
+          "url": "https://www.keepersecurity.com/desktop_electron/Linux/repo/deb/keeperpasswordmanager_15.0.12_amd64.deb",
+          "sha256": "fe066ce9eba1893a0732dde0751a237dba37c1c3c40c1d24e214ca67eb796fc5"
         },
         {
           "type": "script",
@@ -45,9 +45,9 @@
       ],
       "buildsystem": "simple",
       "build-commands": [
-        "ar x keeperpasswordmanager_15.0.11_amd64.deb",
+        "ar x keeperpasswordmanager_15.0.12_amd64.deb",
         "tar xf data.tar.xz -C /app",
-        "rm -Rf keepersecurity-15.0.11.deb control.tar.gz data.tar.xz debian-binary",
+        "rm -Rf keepersecurity-15.0.12.deb control.tar.gz data.tar.xz debian-binary",
         "chmod -R 755 /app/usr/bin/keeperpasswordmanager",
         "mv start.sh /app"
       ],
