@@ -21,28 +21,5 @@
     <binary>keepersecurity</binary>
   </provides>
 
-  <releases>
-    <release version="15.0.15" date="2021-02-03">
-      <description>
-        <p>release-15.0.15</p>
-      </description>
-    </release>
-    <release version="15.0.13" date="2021-01-07">
-      <description>
-        <p>release-15.0.13</p>
-      </description>
-    </release>
-    <release version="15.0.12" date="2020-12-28">
-      <description>
-        <p>release-15.0.12</p>
-      </description>
-    </release>
-    <release version="15.0.11" date="2020-11-12">
-      <description>
-        <p>release-15.0.11</p>
-      </description>
-    </release>
-  </releases>
-
   <content_rating type="oars-1.1" />
 </component>
