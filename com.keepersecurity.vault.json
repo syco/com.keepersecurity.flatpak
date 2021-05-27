@@ -27,7 +27,7 @@
           "type": "script",
           "dest-filename": "start.sh",
           "commands": [
-            "exec zypak-wrapper /app/usr/bin/keeperpasswordmanager $@"
+            "exec zypak-wrapper /app/usr/lib/keeperpasswordmanager/keeperpasswordmanager $@"
           ]
         },
         {
@@ -48,7 +48,10 @@
         "ar x keeperpasswordmanager_16.0.1_amd64.deb",
         "tar xf data.tar.xz -C /app",
         "rm -Rf keepersecurity-16.0.1.deb control.tar.gz data.tar.xz debian-binary",
-        "chmod -R 755 /app/usr/bin/keeperpasswordmanager",
+        "find /app/usr/lib/keeperpasswordmanager/resources -type d -print0 | xargs -0 chmod 755",
+        "chmod 755 /app/usr/lib/keeperpasswordmanager/locales",
+        "chmod 755 /app/usr/lib/keeperpasswordmanager/swiftshader",
+        "chmod 755 /app/usr/lib/keeperpasswordmanager/keeperpasswordmanager",
         "mv start.sh /app"
       ],
       "post-install": [
