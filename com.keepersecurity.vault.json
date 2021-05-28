@@ -27,7 +27,7 @@
           "type": "script",
           "dest-filename": "start.sh",
           "commands": [
-            "exec zypak-wrapper /app/usr/lib/keeperpasswordmanager/keeperpasswordmanager $@"
+            "exec zypak-wrapper /app/lib/keeperpasswordmanager/keeperpasswordmanager $@"
           ]
         },
         {
@@ -46,21 +46,14 @@
       "buildsystem": "simple",
       "build-commands": [
         "ar x keeperpasswordmanager_16.0.1_amd64.deb",
-        "tar xf data.tar.xz -C /app",
+        "tar xf data.tar.xz --strip-components=1 -C /app",
         "rm -Rf keepersecurity-16.0.1.deb control.tar.gz data.tar.xz debian-binary",
-        "find /app/usr/lib/keeperpasswordmanager/resources -type d -print0 | xargs -0 chmod 755",
-        "chmod 755 /app/usr/lib/keeperpasswordmanager/locales",
-        "chmod 755 /app/usr/lib/keeperpasswordmanager/swiftshader",
-        "chmod 755 /app/usr/lib/keeperpasswordmanager/keeperpasswordmanager",
         "mv start.sh /app"
       ],
       "post-install": [
         "install -Dm644 com.keepersecurity.vault.desktop /app/share/applications/com.keepersecurity.vault.desktop",
         "install -Dm644 com.keepersecurity.vault.png /app/share/icons/com.keepersecurity.vault.png",
-        "install -Dm644 com.keepersecurity.vault.metainfo.xml /app/share/metainfo/com.keepersecurity.vault.metainfo.xml",
-        "install -Dm644 com.keepersecurity.vault.desktop /app/usr/share/applications/com.keepersecurity.vault.desktop",
-        "install -Dm644 com.keepersecurity.vault.png /app/usr/share/icons/com.keepersecurity.vault.png",
-        "install -Dm644 com.keepersecurity.vault.metainfo.xml /app/usr/share/metainfo/com.keepersecurity.vault.metainfo.xml"
+        "install -Dm644 com.keepersecurity.vault.metainfo.xml /app/share/metainfo/com.keepersecurity.vault.metainfo.xml"
       ]
     }
   ]
