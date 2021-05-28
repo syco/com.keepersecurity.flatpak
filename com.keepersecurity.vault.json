@@ -51,9 +51,9 @@
         "mv start.sh /app"
       ],
       "post-install": [
-        "install -Dm644 com.keepersecurity.vault.desktop /app/share/applications/com.keepersecurity.vault.desktop",
-        "install -Dm644 com.keepersecurity.vault.png /app/share/icons/com.keepersecurity.vault.png",
-        "install -Dm644 com.keepersecurity.vault.metainfo.xml /app/share/metainfo/com.keepersecurity.vault.metainfo.xml"
+        "install -Dm644 com.keepersecurity.vault.desktop /app/usr/share/applications/com.keepersecurity.vault.desktop",
+        "install -Dm644 com.keepersecurity.vault.png /app/usr/share/icons/com.keepersecurity.vault.png",
+        "install -Dm644 com.keepersecurity.vault.metainfo.xml /app/usr/share/metainfo/com.keepersecurity.vault.metainfo.xml"
       ]
     }
   ]
